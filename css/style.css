@@ -57,8 +57,23 @@ footer {
 	background-color: black;
 }
 
+#footer-text {
+	float: left;
+	margin-left: 125px;
+	margin-top: 35px;
+}
+
+#footer-text p{
+	color: white;
+}
+#footer-text h2{
+	color: red;
+	font-size: 20px;
+}
+
 .follow-buttons {
-	margin-left: 320px;
+	margin-left: 75px;
+	float: left;
 }
 
 .follow-buttons p{

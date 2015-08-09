@@ -1,0 +1,129 @@
+@import 'join.css';
+@import 'sponsors.css';
+@import 'nav.css';
+@import 'home.css';
+@import 'meet.css';
+@import 'normalize.css';
+
+
+@-ms-viewport {
+  width: device-width;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+  list-style: none;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: 'Ariel', sans-serif;
+  line-height: 1.5em;
+  width: 100%
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+h1{
+  text-transform: uppercase;
+  font-size: 2.75vw;
+  font-weight: 500;
+  line-height: .85;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5vw;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 1.5vw;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -2;
+}
+
+.content {
+	width: 100%;
+	float: left;
+  margin-top: -10px;
+}
+
+.head {
+  width:100%;
+  height: 60%;
+  background: red;
+}
+
+.head h1 {
+  position: absolute;
+  margin-top: 150px;
+  margin-left: 12.5%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 75%;
+  text-align: center;
+  color: white;
+  background: tomato;
+  font-size: 7vw;
+}
+
+.info {
+  width: 100%;
+}
+
+.info p {
+  margin-left: 12.5%;
+  width: 75%;
+  text-align: justify;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-weight: bold;
+  font-size: 3vw;
+}
+
+@media (min-width: 750px) {
+
+  .content {
+    margin-top: 0;
+    width: 80%;
+    margin-left: 20%;
+  }
+
+  .head h1 {
+    width: 20%;
+    margin-left: 30%;
+    font-size: 2.75vw;
+  }
+
+  .info p {
+    margin-left: 25%;
+    width: 50%;
+    text-align: justify;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-weight: bold;
+    font-size: 1.5vw;
+  }
+
+
+}
+

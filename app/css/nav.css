@@ -1,0 +1,167 @@
+.side-bar {
+	position: absolute;
+	display: inline;
+	width: 100%;
+	z-index: 5;
+
+}
+
+.side-bar .logo {
+	width: 10%;
+	float: left;
+	background: white;
+}
+
+.side-bar .logo.science {
+	height: 30px;
+	padding-top: 1%;
+}
+
+.side-bar .nav {
+	width: 80%;
+	float: left;
+}
+
+.side-bar .nav ul {
+	width: 100%;
+}
+
+.side-bar .nav li {
+	width: 25%;
+	height: 30px;
+	float: left;
+	background: #99FF99;
+	border: 1px solid white;
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 2px;
+	font-size: 1.25vw;
+	color: white;
+	font-family: 'Ariel', sans-serif;
+}
+
+	.side-bar .nav li:hover {
+		background: #33CC66;
+		color: tomato;
+		cursor: pointer;
+	}
+
+
+.footer {
+	background: firebrick;
+	width: 100%;
+	float: left;
+	padding-top: 25px;
+	height: 20%;
+	bottom: 0;
+}
+
+.footer .contact {
+	color: white;
+	padding-left: 5%;
+	float: left;
+	width: 50%;
+}
+
+.footer .social-icons {
+	float: left;
+	width: 50%;
+}
+
+.social-icons img {
+	width: 30px;
+	margin-left: 50%;
+	margin-top: 5px;
+	display: inline-block;
+}
+
+.footer h4 {
+	font-family: "open sans";
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.footer p {
+	font-size: 1.25vw;
+}
+
+.sponsor-bar {
+	margin-left: 35%;
+	width: 100%;
+	margin-top: 50px;
+	float: right;
+	position: fixed;
+	z-index: 10;
+}
+
+.sponsor-bar p {
+	float: left;
+	background: red;
+	padding-left: 10px;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 2vw;
+	color: white;
+}
+
+.sponsor-button {
+	float: left;
+}
+
+.sponsor-button p {
+	background: white;
+	color: black;
+	padding-right: 10px;
+}
+
+	.sponsor-button p:hover {
+		background: #99FF99;
+		color: white;
+	}
+
+@media (min-width: 750px) {
+
+	.side-bar {
+		width: 20%;
+		display: inline;
+		position: fixed;
+		background: white;
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+
+	.side-bar .logo {
+		width: 100%;
+	}
+
+	.side-bar .nav {
+		width: 100%;
+		float: left;
+	}
+
+	.side-bar .nav ul {
+		width: 100%;
+	}
+
+	.side-bar .nav li {
+		width: 100%;
+		height: 70px;
+		padding-top: 22px;
+		font-size: 1.25vw;
+	}
+
+	.sponsor-bar {
+		margin-left: 53%;
+		margin-top: 5px;
+	}
+
+	.sponsor-bar p {
+		font-size: 	.85vw;
+		padding: 10px;
+	}
+
+	.social-icons img {
+		width: 50px;
+		margin-left: 75%;
+	}
+}

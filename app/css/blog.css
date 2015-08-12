@@ -1,0 +1,52 @@
+.head.blog-entry {
+  background-color: #F0F0F0;
+  height: 40%;
+}
+
+.head.blog-entry h1 {
+  margin-top: 50px;
+}
+
+#entry article {
+  padding-top: 50px;
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#entry article h1 {
+  color: tomato;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#entry article h4 {
+  text-align: center;
+  color: #33CC66;
+}
+
+#entry p {
+  padding: 25px;
+}
+
+#entries{
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#entries li {
+  background: #FF6666;
+  width: 45%;
+  float: left;
+  height: 150px;
+  padding: 15px;
+  margin: 2%;
+}
+
+#entries li:hover {
+  background: #FF9999;
+  cursor: pointer;
+}

@@ -1,6 +1,6 @@
 <section data-ng-controller="BlogController" id="blog" data-ng-init="getEntries()">
-    <div class = 'head blog-entry'>
-    <h1>Seed To Table Blog</h1>
+  <div class = 'head blog-entry'>
+    <h1>Blog To Table</h1>
   </div>
   <ul id="entries">
     <li data-ng-repeat="entry in entries track by $index" data-ng-click="redirect(entry._id)">

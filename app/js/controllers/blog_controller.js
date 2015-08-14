@@ -3,12 +3,16 @@
 module.exports = function(app) {
   app.controller('BlogController', ['$scope', '$location', '$routeParams', 'RESTResource', function($scope, $location, $routeParams, RESTResource) {
 
+     if(!auth.isSignedIn()){
+      $cookies.put('postAuthenticationRedirect', $location.path());
+      $location.path('/sign_in');
+    }
+
     var Entries = RESTResource('entries');
     $scope.entry = {};
 
     $scope.redirect = function(address) {
-      console.log(address);
-      $location.path('/blog/' + address);
+      $location.path(address);
     }
 
     $scope.createEntry = function() {

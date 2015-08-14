@@ -1,3 +1,52 @@
+#blog .sign-in {
+  text-transform: uppercase;
+  width: 100%;
+  text-align: right;
+  padding-right: 100px;
+  padding-top: 25px;
+  color: tomato;
+}
+
+#sign-in form {
+  width: 40%;
+  padding-top: 25px;
+  display: block;
+  background: tomato;
+  margin: 50px auto;
+}
+
+#sign-in form input {
+  width: 90%;
+  height: 50px;
+  margin-top: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sign-in form button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  background: none;
+  width: 100px;
+  height: 50px;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#sign-in form button:hover {
+  color:#99FF99;
+}
+
+#blog .sign-in:hover {
+  color: red;
+  cursor: pointer;
+}
+
 .head.blog-entry {
   background-color: #F0F0F0;
   height: 40%;

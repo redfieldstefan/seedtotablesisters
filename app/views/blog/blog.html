@@ -2,8 +2,9 @@
   <div class = 'head blog-entry'>
     <h1>Blog To Table</h1>
   </div>
+  <p class="sign-in" data-ng-click="redirect('sign-in')">Sign In</p>
   <ul id="entries">
-    <li data-ng-repeat="entry in entries track by $index" data-ng-click="redirect(entry._id)">
+    <li data-ng-repeat="entry in entries track by $index" data-ng-click="redirect('/blog/' + entry._id)">
       <h3>{{entry.title}}</h3>
       <p>{{entry.date}}</p>
     </li>

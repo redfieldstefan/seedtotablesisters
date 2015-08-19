@@ -1,10 +1,21 @@
-#blog .sign-in {
-  text-transform: uppercase;
-  width: 100%;
-  text-align: right;
+#admin-bar {
+  float: left;
   padding-right: 100px;
   padding-top: 25px;
+  width: 100%;
+}
+
+#admin-bar li {
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-right: 25px;
   color: tomato;
+}
+
+#admin-bar li:hover {
+  color: red;
+  cursor: pointer;
 }
 
 #sign-in form {

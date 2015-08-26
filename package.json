@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "angular": "^1.4.3",
+    "angular-base64": "^2.0.5",
     "angular-cookies": "^1.4.4",
     "angular-route": "^1.4.3",
     "angular-sanitize": "^1.4.3",

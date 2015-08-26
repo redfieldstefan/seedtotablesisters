@@ -116,6 +116,7 @@
 	.sponsor-button p:hover {
 		background: #99FF99;
 		color: white;
+		cursor: pointer;
 	}
 
 @media (min-width: 750px) {

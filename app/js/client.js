@@ -14,6 +14,7 @@ require('./controllers/blog_controller')(seedToTableApp);
 require('./controllers/main_controller')(seedToTableApp);
 
 //directives
+require('./directives/admin_bar_directive')(seedToTableApp);
 require('./directives/nav_directive')(seedToTableApp);
 require('./directives/footer_directive')(seedToTableApp);
 require('./directives/sponsor_bar_directive')(seedToTableApp);

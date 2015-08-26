@@ -39,7 +39,7 @@ module.exports = function (app) {
           },
 
           save: function(id, resourceData, callback) {
-            $http/put('/api' + resourceName + '/' + id, resourceData)
+            $http.put('/api/' + resourceName + '/' + id, resourceData)
               .success(handleSuccess(callback))
               .error(handleError(callback));
           },

@@ -1,25 +1,28 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('BlogController', ['$scope', '$location', '$routeParams', 'RESTResource', function($scope, $location, $routeParams, RESTResource) {
+  app.controller('BlogController', ['$scope', '$location', '$cookies', '$routeParams', 'RESTResource', 'auth', function($scope, $location, $cookies, $routeParams, RESTResource, auth) {
 
-     if(!auth.isSignedIn()){
-      $cookies.put('postAuthenticationRedirect', $location.path());
-      $location.path('/sign_in');
-    }
+    $scope.signedIn = auth.isSignedIn();
+    $scope.id = $routeParams.id;
 
     var Entries = RESTResource('entries');
-    $scope.entry = {};
 
     $scope.redirect = function(address) {
       $location.path(address);
+    };
+
+    $scope.logOut = function() {
+      auth.logout();
+      $scope.signedIn = auth.isSignedIn();
+      $scope.editing = false;
     }
 
     $scope.createEntry = function() {
       var date = new Date(Date.now());
       var newEntry = {
-        title: document.getElementById('blog-title').value,
-        body: document.getElementById('blog-body').value.split('\n').filter(function(paragraph) {
+        title: document.getElementById('entry-title').value,
+        body: document.getElementById('entry-body').value.split('\n').filter(function(paragraph) {
           return paragraph.length > 0;
         }),
         date: (date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear())
@@ -46,7 +49,7 @@ module.exports = function(app) {
     };
 
     $scope.getEntry = function() {
-      Entries.getOne($routeParams.id, function(err, entry) {
+      Entries.getOne($scope.id, function(err, entry) {
         if (err) {
           console.log(err);
           return $scope.errors.push({msg: 'Problem finding resource'});
@@ -58,11 +61,44 @@ module.exports = function(app) {
     };
 
     $scope.editEntry = function() {
+      $scope.editing = true;
+      if($scope.paragraphs) {
+        $scope.editBody = '';
+        $scope.paragraphs.forEach(function(paragraph) {
+          $scope.editBody += paragraph + '\n\r';
+        });
+      }
+    }
 
+    $scope.saveEntry = function() {
+      $scope.editing = false;
+      var entry = {
+        title: document.getElementById('entry-title').value,
+        body: document.getElementById('entry-body').value.split('\n').filter(function(paragraph) {
+          return paragraph.length > 0;
+        })
+      };
+      Entries.save($scope.id, entry, function(err, data) {
+        if(err) {
+          $scope.errors.push(err);
+          return console.log({msg: 'Dang, error creating the blog entry'});
+        } else {
+          $scope.editing = false;
+          $scope.paragraphs = entry.body;
+          $scope.title = entry.title;
+        }
+      });
     };
 
-    $scope.deleteEntry = function() {
-
+    $scope.deleteEntry = function(entry) {
+      Entries.remove(entry._id, function(err, data) {
+        if (err) {
+          console.log(err);
+          return $scope.errors.push({msg: 'Could not remove entry'});
+        }
+        $scope.entries.splice($scope.entries.indexOf(entry), 1);
+        $location.path('/blog');
+      });
     };
 
   }]);

@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "build": "grunt --gruntfile ./dev/Gruntfile.js",
+    "start": "nodemon server.js || node server.js",
+    "db": "mongod --dbpath=./data"
   },
   "repository": {
     "type": "git",
@@ -18,17 +19,27 @@
   },
   "homepage": "https://github.com/redfieldstefan/seedtotablesisters",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.13.3",
+    "eat": "^0.1.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.2",
+    "passport": "^0.2.2",
+    "passport-http": "^0.2.2"
+  },
+  "devDependencies": {
     "angular": "^1.4.3",
+    "angular-cookies": "^1.4.4",
     "angular-route": "^1.4.3",
     "angular-sanitize": "^1.4.3",
-    "body-parser": "^1.13.3",
-    "express": "^4.13.3",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-cssmin": "^0.13.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-webpack": "^1.0.11",
+    "uuid": "^2.0.1",
+    "validator": "^4.0.2",
     "webpack-dev-server": "^1.10.1"
   }
 }

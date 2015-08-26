@@ -1,0 +1,177 @@
+#no-posts {
+  text-align: center;
+  text-transform: uppercase;
+  color: tomato;
+  padding: 100px;
+}
+
+#admin-bar {
+  float: left;
+  padding-right: 100px;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+#admin-bar li {
+  text-transform: uppercase;
+  text-align: right;
+  float: right;
+  padding-right: 25px;
+  color: tomato;
+}
+
+#admin-bar li:hover {
+  color: red;
+  cursor: pointer;
+}
+
+#sign-in form {
+  width: 40%;
+  padding-top: 25px;
+  display: block;
+  background: tomato;
+  margin: 50px auto;
+}
+
+#sign-in form input {
+  width: 90%;
+  height: 50px;
+  margin-top: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sign-in form button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border: none;
+  background: none;
+  width: 100px;
+  height: 50px;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#sign-in form button:hover {
+  color:#99FF99;
+}
+
+#blog .sign-in:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.head.blog-entry {
+  background-color: #F0F0F0;
+  height: 40%;
+}
+
+.head.blog-entry h1 {
+  margin-top: 50px;
+}
+
+#entry article {
+  padding-top: 50px;
+  width: 75%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#entry article h1 {
+  color: tomato;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#entry article h4 {
+  text-align: center;
+  color: #33CC66;
+}
+
+#entry p {
+  padding: 25px;
+}
+
+#entries{
+  display: block;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#entries li {
+  background: #FF6666;
+  width: 45%;
+  float: left;
+  height: 150px;
+  padding: 15px;
+  margin: 2%;
+}
+
+#entries li:hover {
+  background: #FF9999;
+  cursor: pointer;
+}
+
+#entries h4 {
+  float: left;
+  bottom: 0;
+  color: white;
+  text-transform: uppercase;
+  padding-right: 25px;
+  padding-top: 50px;
+}
+
+  #entries h4:hover {
+    color:#99FF99;
+  }
+
+#new-entry {
+  width: 75%;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#new-entry input {
+  text-align: center;
+}
+
+#new-entry h1 {
+  text-align: center;
+  padding: 50px;
+}
+
+#entry-title {
+  display: block;
+  width: 30%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+#entry-body {
+  width: 100%;
+  height: 70%;
+}
+
+#entry-button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: tomato;
+  border: none;
+  width: 100px;
+  height: 50px;
+  color: white;
+  text-transform: uppercase;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

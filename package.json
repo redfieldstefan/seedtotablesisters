@@ -40,6 +40,8 @@
     "grunt-contrib-cssmin": "^0.13.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-webpack": "^1.0.11",
+    "superagent": "^1.3.0",
+    "superagent-cli": "^2.0.0",
     "uuid": "^2.0.1",
     "validator": "^4.0.2",
     "webpack-dev-server": "^1.10.1"

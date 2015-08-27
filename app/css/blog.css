@@ -76,7 +76,8 @@
 }
 
 #entry article {
-  padding-top: 50px;
+  padding-top: 75px;
+  padding-bottom: 75px;
   width: 75%;
   display: block;
   margin-left: auto;
@@ -91,11 +92,12 @@
 
 #entry article h4 {
   text-align: center;
+  padding-bottom: 50px;
   color: #33CC66;
 }
 
 #entry p {
-  padding: 25px;
+  padding-top: 25px;
 }
 
 #entries{

@@ -25,7 +25,7 @@ module.exports = function(app) {
         body: document.getElementById('entry-body').value.split('\n').filter(function(paragraph) {
           return paragraph.length > 0;
         }),
-        date: (date.getDate() + '/' + date.getMonth() + '/' + date.getFullYear())
+        date: (date.getMonth() + '/' + date.getDate() + '/' + date.getFullYear())
       };
       Entries.create(newEntry, function(err, data) {
         if(err) {

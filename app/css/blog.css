@@ -85,19 +85,21 @@
 }
 
 #entry article h1 {
-  color: tomato;
+  color: Teal;
   text-transform: uppercase;
   text-align: center;
 }
 
 #entry article h4 {
   text-align: center;
+  padding-top: 10px;
   padding-bottom: 50px;
   color: #33CC66;
 }
 
 #entry p {
   padding-top: 25px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 #entries{

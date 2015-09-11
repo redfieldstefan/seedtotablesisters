@@ -5,6 +5,12 @@ module.exports = function(app) {
 
     $scope.signedIn = auth.isSignedIn();
     $scope.id = $routeParams.id;
+    $scope.creds = {
+      bucket: 'seed-to-table-sisters',
+      access_key: 'AKIAIX27QQSBQYUX33WA',
+      secret_key: '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',
+      regtion: 'us-west-1'
+    }
 
     var Entries = RESTResource('entries');
 
@@ -100,6 +106,28 @@ module.exports = function(app) {
         $location.path('/blog');
       });
     };
+
+    //UPLOAD HANDLING
+
+    var bucket = new AWS.S3({ params: { Bucket: $scope.creds.bucket } });
+
+    angular.element('#upload-button').click(function () {
+      bucket.config.update({ accessKeyId: $scope.creds.access_key, secretAccessKey: $scope.creds.secret_key });
+      bucket.config.region = 'us-west-1';
+      var file = angular.element('#file-selector')[0].files[0];
+      console.log(bucket);
+      if (file) {
+        var params = {Key: file.name, ContentType: file.type, Body: file};
+        bucket.putObject(params, function (err, data) {
+          if(err) {
+            return console.log(err);
+          }
+          console.log(data)
+        });
+      } else {
+        console.log('Nothing to upload.');
+      }
+    });
 
   }]);
 };

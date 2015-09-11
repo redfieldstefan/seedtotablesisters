@@ -1,7 +1,0 @@
- <ul data-ng-controller="BlogController" id="admin-bar">
-    <li data-ng-show='!signedIn' data-ng-click="redirect('sign-in')">Log In</li>
-    <li data-ng-show='signedIn' data-ng-click="logOut()">Log Out</li>
-    <li data-ng-show='signedIn' data-ng-click="redirect('create-entry')">Write Entry</li>
-    <li data-ng-show='signedIn && !editing' data-ng-click='editEntry()'>Edit</li>
-    <li data-ng-show='editing' data-ng-click='editing = false'>Cancel</li>
-</ul>

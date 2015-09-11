@@ -3,7 +3,6 @@
 	display: inline;
 	width: 100%;
 	z-index: 5;
-
 }
 
 .side-bar .logo {
@@ -42,7 +41,7 @@
 
 	.side-bar .nav li:hover {
 		background: #33CC66;
-		color: tomato;
+		color: #FF9999;
 		cursor: pointer;
 	}
 
@@ -117,6 +116,7 @@
 	.sponsor-button p:hover {
 		background: #99FF99;
 		color: white;
+		cursor: pointer;
 	}
 
 @media (min-width: 750px) {

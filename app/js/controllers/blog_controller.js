@@ -7,8 +7,8 @@ module.exports = function(app) {
     $scope.id = $routeParams.id;
     $scope.creds = {
       bucket: 'seed-to-table-sisters',
-      access_key: 'AKIAIX27QQSBQYUX33WA',
-      secret_key: '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',
+      access_key: process.env.AWS_ACCESS_KEY,
+      secret_key: process.env.AWS_SECRET_KEY,
       regtion: 'us-west-1'
     }
 

@@ -7,8 +7,6 @@ var accessKeyId = process.env.AWS_ACCESS_KEY;
 var secretAccessKey = process.env.AWS_SECRET_KEY;
 var S3_BUCKET = process.env.S3_BUCKET;
 
-var pluploader = new Pluploader();
-
 AWS.config.update({
     accessKeyId: accessKeyId,
     secretAccessKey: secretAccessKey
@@ -18,7 +16,7 @@ var s3 = new AWS.S3();
 
 pluploader.on('fileUploaded', function(file, req) {
   var params = {
-        Bucket: "asyncloader",
+        Bucket: "seed-to-table-sisters",
         Key: file.name,
         Body: file.data
   };

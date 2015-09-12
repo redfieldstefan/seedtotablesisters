@@ -34,6 +34,8 @@
     "angular-cookies": "^1.4.4",
     "angular-route": "^1.4.3",
     "angular-sanitize": "^1.4.3",
+    "aws-sdk": "^2.2.0",
+    "fs": "0.0.2",
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.8.0",

@@ -17,7 +17,14 @@
     <h1>CREATE ENTRY</h1>
     <input id="entry-title" type="text" placeholder="Title">
     <textarea id="entry-body" ></textarea>
-    <button id="entry-button" data-ng-click="createEntry()">Submit</button>
+    <section id="uploader">
+      <p>Select an image</p>
+      <input id="file-selector" type="file" name="image" accept="image/*"/>
+      <button id="upload-button">Add Image</button>
+    </section>
+    <img id="image-preview"/>
+    <button id="entry-button" data-ng-click="createEntry()">Create Entry</button>
   </section>
+
 
 </section>

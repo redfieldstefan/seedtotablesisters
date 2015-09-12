@@ -17,6 +17,7 @@
     <h1>{{title}}</h1>
     <h4>{{date}}</h4>
     <p data-ng-repeat="paragraph in paragraphs track by $index">{{paragraph}}</p>
+    <img id="blog-img" src="{{image}}" />
   </article>
 
   <article data-ng-if="editing">

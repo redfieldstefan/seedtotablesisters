@@ -21,10 +21,10 @@ module.exports = function (grunt) {
         output: {
           path: path.join(__dirname, '/public'),
           filename: 'bundle.min.js'
-        }//,
-        // plugins: [
-        //   new webpack.optimize.UglifyJsPlugin({minimize: true})
-        //  ]
+        },
+        plugins: [
+          new webpack.optimize.UglifyJsPlugin({minimize: true})
+         ]
       }
     },
 

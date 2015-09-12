@@ -31,7 +31,8 @@ module.exports = function(app) {
         body: document.getElementById('entry-body').value.split('\n').filter(function(paragraph) {
           return paragraph.length > 0;
         }),
-        date: (date.getMonth() + '/' + date.getDate() + '/' + date.getFullYear())
+        images: [$scope.imageUrl],
+        date: ((date.getMonth() + 1) + '/' + date.getDate() + '/' + date.getFullYear())
       };
       Entries.create(newEntry, function(err, data) {
         if(err) {
@@ -63,6 +64,7 @@ module.exports = function(app) {
         $scope.paragraphs = entry.body;
         $scope.title = entry.title;
         $scope.date = entry.date;
+        $scope.image = entry.images[0];
       });
     };
 
@@ -115,14 +117,15 @@ module.exports = function(app) {
       bucket.config.update({ accessKeyId: $scope.creds.access_key, secretAccessKey: $scope.creds.secret_key });
       bucket.config.region = 'us-west-1';
       var file = angular.element('#file-selector')[0].files[0];
-      console.log(bucket);
       if (file) {
         var params = {Key: file.name, ContentType: file.type, Body: file};
         bucket.putObject(params, function (err, data) {
           if(err) {
             return console.log(err);
           }
-          console.log(data)
+          console.log(data);
+          $scope.imageUrl = ('https://s3-us-west-2.amazonaws.com/seed-to-table-sisters/' + file.name);
+          angular.element('#image-preview').attr('src', $scope.imageUrl);
         });
       } else {
         console.log('Nothing to upload.');

@@ -24,7 +24,12 @@ require('./services/auth_service')(seedToTableApp);
 require('./services/rest_service')(seedToTableApp);
 
 //routes
-seedToTableApp.config(['$routeProvider', function($routeProvider){
+seedToTableApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpProvider){
+
+  $httpProvider.defaults.useXDomain = true;
+  $httpProvider.defaults.withCredentials = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
   $routeProvider
     .when('/', {
       templateUrl: 'views/home.html',

@@ -5,14 +5,9 @@ module.exports = function(app) {
 
     $scope.signedIn = auth.isSignedIn();
     $scope.id = $routeParams.id;
-    $scope.creds = {
-      bucket: 'seed-to-table-sisters',
-      access_key: process.env.AWS_ACCESS_KEY,
-      secret_key: process.env.AWS_SECRET_KEY,
-      regtion: 'us-west-1'
-    }
 
     var Entries = RESTResource('entries');
+    var UploadConfig = RESTResource('upload');
 
     $scope.redirect = function(address) {
       $location.path(address);
@@ -111,26 +106,30 @@ module.exports = function(app) {
 
     //UPLOAD HANDLING
 
-    var bucket = new AWS.S3({ params: { Bucket: $scope.creds.bucket } });
-
-    angular.element('#upload-button').click(function () {
-      bucket.config.update({ accessKeyId: $scope.creds.access_key, secretAccessKey: $scope.creds.secret_key });
-      bucket.config.region = 'us-west-1';
+    $scope.upload = function() {
       var file = angular.element('#file-selector')[0].files[0];
-      if (file) {
-        var params = {Key: file.name, ContentType: file.type, Body: file};
-        bucket.putObject(params, function (err, data) {
-          if(err) {
-            return console.log(err);
-          }
-          console.log(data);
-          $scope.imageUrl = ('https://s3-us-west-2.amazonaws.com/seed-to-table-sisters/' + file.name);
-          angular.element('#image-preview').attr('src', $scope.imageUrl);
-        });
-      } else {
-        console.log('Nothing to upload.');
-      }
-    });
+      var bucket = new AWS.S3({ params: { Bucket: 'seed-to-table-sisters' } });
+      bucket.config.region = 'us-west-2';
+      UploadConfig.getAll(function(err, data) {
+        if(err) {
+          return console.log(err);
+        }
+        bucket.config.update({ accessKeyId: data.accessKeyId, secretAccessKey: data.secretAccessKey });;
+        if (file) {
+          var params = {Key: file.name, ContentType: file.type, Body: file};
+          bucket.putObject(params, function (err, data) {
+            if(err) {
+              return console.log(err);
+            }
+            console.log(data);
+            $scope.imageUrl = ('https://s3-us-west-2.amazonaws.com/seed-to-table-sisters/' + file.name);
+            angular.element('#image-preview').attr('src', $scope.imageUrl);
+          });
+        } else {
+          console.log('Nothing to upload.');
+        }
+      });
+    };
 
   }]);
 };

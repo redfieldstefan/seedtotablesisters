@@ -166,4 +166,8 @@
 		font-size: 1.75vw;
 		line-height: 1.15em;
 	}
+
+	.panel.five p {
+		font-size: 1.25vw;
+	}
 }

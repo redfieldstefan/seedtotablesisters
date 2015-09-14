@@ -4,6 +4,18 @@ var Entry = require('../models/Entry.js');
 var Admin = require('../models/Admin');
 var eatAuth = require("../lib/eat_auth")(process.env.APP_SECRET);
 var bodyparser = require('body-parser');
+var fs = require('fs');
+//AWS INFO
+var AWS = require('aws-sdk');
+var accessKeyId = process.env.AWS_ACCESS_KEY;
+var secretAccessKey = process.env.AWS_SECRET_KEY;
+var S3_BUCKET = process.env.S3_BUCKET;
+var AWS_region = process.env.AWS_REGION;
+
+var AWS_config = {
+    accessKeyId: accessKeyId,
+    secretAccessKey: secretAccessKey
+};
 
 module.exports = function(router) {
   router.use(bodyparser.json());
@@ -62,6 +74,10 @@ module.exports = function(router) {
 
       res.status(200).json({msg: 'entry removed'});
     });
+  });
+
+  router.get('/upload-config', eatAuth, function(req, res) {
+    res.json(AWS_config);
   });
 
 };

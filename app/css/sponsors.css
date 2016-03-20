@@ -1,3 +1,8 @@
+#sponsors .head {
+  background: url('../images/sponsors/sponsor-head.png') no-repeat;
+  background-size: cover;
+}
+
 #sponsor-boxes {
   width: 100%;
   float: left;

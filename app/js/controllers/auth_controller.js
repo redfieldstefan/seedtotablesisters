@@ -8,6 +8,8 @@ module.exports = function(app) {
     $scope.hasValidationErrors = false;
     $scope.validationErrorMessage = '';
 
+
+
     $scope.redirect = function(destination) {
       $location.path('/' + destination);
     }

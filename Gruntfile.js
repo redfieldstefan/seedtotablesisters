@@ -11,7 +11,7 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-clean');
 
-  var watchFiles = ['Gruntfile.js','./app/**/*.js', './app/**/*.css', './app/**/*.html'];
+  var watchFiles = ['Gruntfile.js', './app/**/*.css', './app/**/*.html', './app/**/*.js'];
 
   grunt.initConfig({
 
@@ -82,5 +82,8 @@ module.exports = function (grunt) {
     },
   });
 
-  grunt.registerTask('build', ['webpack:client', 'copy:html', 'cssmin', 'copy:images'])
+  grunt.registerTask('build', ['webpack:client', 'copy:html', 'cssmin', 'copy:images']);
+  grunt.registerTask('build-light', [ 'copy:html', 'cssmin', 'copy:images']);
+  grunt.registerTask('launch', ['webpack:client', 'copy:html', 'cssmin', 'copy:images', 'watch']);
+
 };

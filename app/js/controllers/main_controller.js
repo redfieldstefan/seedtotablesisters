@@ -1,7 +1,9 @@
 'use strict';
 
 module.exports = function(app) {
-  app.controller('MainController', ['$scope', '$location', function($scope, $location) {
+  app.controller('MainController', ['$scope', '$location', 'ngDialog', function($scope, $location, ngDialog) {
+
+    $scope.modalShown = false;
 
     $scope.redirect = function(destination) {
       $location.path('/' + destination);
@@ -10,6 +12,10 @@ module.exports = function(app) {
     $scope.scroll = function(amount, speed) {
         console.log("scroll function");
         angular.element('html, body').animate({scrollTop: amount}, speed);
+    };
+
+    $scope.toggleModal = function() {
+      ngDialog.open({ template: 'templateId' });
     };
 
   }]);

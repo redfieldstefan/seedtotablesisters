@@ -4,6 +4,8 @@
 @import 'nav.css';
 @import 'home.css';
 @import 'meet.css';
+@import 'top-bar.css';
+@import 'modal.css';
 @import 'normalize.css';
 
 
@@ -98,6 +100,10 @@ p {
   padding-bottom: 50px;
   font-weight: bold;
   font-size: 3vw;
+}
+
+.text-center {
+  text-align: center;
 }
 
 @media (min-width: 750px) {

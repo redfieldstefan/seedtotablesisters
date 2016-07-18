@@ -1,0 +1,34 @@
+.top-bar {
+  width: 100%;
+  margin-top: 50px;
+  float: left;
+  position: fixed;
+  z-index: 10;
+  padding-left: 57.5%;
+}
+
+.top-bar p {
+  text-transform: uppercase;
+  background: #FF9999;
+  color: white;
+  float: left;
+  margin-left: 5px
+}
+
+.top-bar p.clickable:hover {
+    background: #9F9;
+    color: white;
+    cursor: pointer;
+}
+
+@media (min-width: 750px) {
+
+  .top-bar {
+    margin-top: 5px;
+  }
+
+  .top-bar p {
+    font-size:  13px;
+    padding: 10px;
+  }
+}

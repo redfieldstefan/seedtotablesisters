@@ -5,8 +5,9 @@ require('angular-route');
 require('angular-sanitize');
 require('angular-cookies');
 require('angular-base64');
+require('ng-dialog');
 
-var seedToTableApp = angular.module('seedToTableApp', ['ngRoute', 'ngSanitize', 'base64', 'ngCookies']);
+var seedToTableApp = angular.module('seedToTableApp', ['ngRoute', 'ngSanitize', 'base64', 'ngCookies', 'ngDialog']);
 
 //controllers
 require('./controllers/auth_controller')(seedToTableApp);

@@ -41,7 +41,6 @@
 
 	.side-bar .nav li:hover {
 		background: #33CC66;
-		color: #FF9999;
 		cursor: pointer;
 	}
 
@@ -84,41 +83,6 @@
 	font-size: 1.25vw;
 }
 
-.sponsor-bar {
-	margin-left: 35%;
-	width: 100%;
-	margin-top: 50px;
-	float: right;
-	position: fixed;
-	z-index: 10;
-}
-
-.sponsor-bar p {
-	float: left;
-	background: red;
-	padding-left: 10px;
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 2vw;
-	color: white;
-}
-
-.sponsor-button {
-	float: left;
-}
-
-.sponsor-button p {
-	background: white;
-	color: black;
-	padding-right: 10px;
-}
-
-	.sponsor-button p:hover {
-		background: #99FF99;
-		color: white;
-		cursor: pointer;
-	}
-
 @media (min-width: 750px) {
 
 	.side-bar {
@@ -148,16 +112,6 @@
 		height: 70px;
 		padding-top: 22px;
 		font-size: 1.25vw;
-	}
-
-	.sponsor-bar {
-		margin-left: 53%;
-		margin-top: 5px;
-	}
-
-	.sponsor-bar p {
-		font-size: 	.85vw;
-		padding: 10px;
 	}
 
 	.social-icons img {

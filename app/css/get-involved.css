@@ -1,0 +1,51 @@
+#getInvolved .head {
+  background-color: tomato ;
+  height: 30%;
+}
+
+#getInvolved .head h1 {
+  margin-top: 80px;
+  padding: 0;
+}
+
+#getInvolved .section {
+  padding-top: 50px;
+  width: 100%;
+  float: left;
+}
+
+#getInvolved .section ul {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#getInvolved .section ul .job {
+  padding-top: 50px;
+  width: 100%;
+  float: left;
+}
+
+#getInvolved .section ul .job h3 {
+  padding-bottom: 20px;
+  font-size: 24px;
+}
+
+#getInvolved .section ul .job p {
+  float: left;
+  font-size: 14px;
+}
+
+#getInvolved .section ul .job a {
+  padding-top: 20px;
+  float: left;
+}
+
+#getInvolved .section ul.volunteers {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#getInvolved .section ul .volunteer {
+  padding-top: 20px;
+}

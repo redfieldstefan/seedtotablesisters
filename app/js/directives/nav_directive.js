@@ -7,7 +7,7 @@ module.exports = function(app) {
       scope: {
         redirect: "&"
       },
-      templateUrl: 'views/templates/nav_template.html'
+      templateUrl: 'views/common/nav_template.html'
     }
   });
 };

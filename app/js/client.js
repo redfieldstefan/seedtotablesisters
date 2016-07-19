@@ -52,6 +52,14 @@ seedToTableApp.config(['$routeProvider', '$httpProvider', function($routeProvide
       templateUrl: 'views/join.html',
       controller: 'MainController'
     })
+    .when('/get-involved', {
+      templateUrl: 'views/get-involved.html',
+      controller: 'MainController'
+    })
+    .when('/csa', {
+      templateUrl: 'views/csa.html',
+      controller: 'MainController'
+    })
     .when('/create-entry', {
       templateUrl: 'views/blog/createEntry.html',
       controller: 'BlogController'

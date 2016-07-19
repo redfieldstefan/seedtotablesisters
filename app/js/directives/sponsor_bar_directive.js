@@ -7,7 +7,7 @@ module.exports = function(app) {
       scope: {
 
       },
-      templateUrl: 'views/templates/sponsor_bar_template.html'
+      templateUrl: 'views/common/sponsor_bar_template.html'
     }
   });
 };

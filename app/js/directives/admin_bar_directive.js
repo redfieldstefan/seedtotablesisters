@@ -7,7 +7,7 @@ module.exports = function(app) {
       scope: {
         redirect: "&"
       },
-      templateUrl: 'views/templates/admin_bar_template.html',
+      templateUrl: 'views/common/admin_bar_template.html',
       controller: 'BlogController'
     }
   });

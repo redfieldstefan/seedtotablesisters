@@ -5,12 +5,14 @@ module.exports = function(app) {
 
     $scope.modalShown = false;
 
+    $scope.currentDate = Date.now();
+    $scope.dinnerDate = new Date(2016, 08, 24).getTime();
+
     $scope.redirect = function(destination) {
       $location.path('/' + destination);
     }
 
     $scope.scroll = function(amount, speed) {
-        console.log("scroll function");
         angular.element('html, body').animate({scrollTop: amount}, speed);
     };
 

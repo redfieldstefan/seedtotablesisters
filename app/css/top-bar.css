@@ -1,13 +1,42 @@
 .top-bar {
   width: 100%;
-  margin-top: 50px;
   float: left;
   position: fixed;
   z-index: 10;
+}
+
+.top-bar .announcement-bar {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  float: left;
+}
+
+.top-bar .announcement-bar p {
+  color: black;
+  margin-left: 15%;
+  margin-top: 13px;
+  font-size: 1.25vw;
+}
+
+.top-bar .announcement-bar a {
+  text-decoration: none;
+  color: #FF9999;
+}
+
+.top-bar .announcement-bar a:hover {
+  text-decoration: underline;
+  color: tomato;
+}
+
+.top-bar .sponsor-bar {
+  width: 100%;
+  margin-top: 5px;
+  float: left;
   padding-left: 57.5%;
 }
 
-.top-bar p {
+.top-bar .sponsor-bar p {
   text-transform: uppercase;
   background: #FF9999;
   color: white;
@@ -15,7 +44,7 @@
   margin-left: 5px
 }
 
-.top-bar p.clickable:hover {
+.top-bar .sponsor-bar p.clickable:hover {
     background: #9F9;
     color: white;
     cursor: pointer;
@@ -23,11 +52,11 @@
 
 @media (min-width: 750px) {
 
-  .top-bar {
+/*  .top-bar {
     margin-top: 5px;
-  }
+  }*/
 
-  .top-bar p {
+  .top-bar .sponsor-bar p {
     font-size:  13px;
     padding: 10px;
   }

@@ -1,4 +1,9 @@
 <div data-ng-controller="MainController" class='top-bar'>
-  <p class="clickable" ng-click='toggleModal()'>Directions</p>
-  <p class="clickable" data-ng-click="redirect('join')">Become a Sponsor</p>
+  <div class="announcement-bar" data-ng-if="currentDate <= dinnerDate">
+    <p >Join us for our fall harvest dinner September 24th! <a href="http://www.seedtotableharvestdinner.com/" target="blank">Visit our event page</a> to learn more.</p>
+  </div>
+  <div class="sponsor-bar">
+    <p class="clickable" data-ng-click='toggleModal()'>Directions</p>
+    <p class="clickable" data-ng-click="redirect('join')">Become a Sponsor</p>
+  </div>
 </div>

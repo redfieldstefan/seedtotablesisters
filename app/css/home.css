@@ -30,27 +30,27 @@
 }
 
 .panel.one {
-	background: url('../images/home-mountains.png') no-repeat center;
+	background: url('../images/home-mountains.jpg') no-repeat center;
 	background-size: cover;
 }
 
 .panel.two {
-	background: url('../images/home-wheelbarrow.png') no-repeat center;
+	background: url('../images/home-wheelbarrow.jpg') no-repeat center;
 	background-size: cover;
 }
 
 .panel.three {
-	background: url('../images/home-vines.png') no-repeat center;
+	background: url('../images/home-vines.jpg') no-repeat center;
 	background-size: cover;
 }
 
 .panel.four {
-	background: url('../images/home-lesson.png') no-repeat center;
+	background: url('../images/home-lesson.jpg') no-repeat center;
 	background-size: cover;
 }
 
 .panel.five {
-	background: url('../images/home-flowers.png') no-repeat center;
+	background: url('../images/home-flowers.jpg') no-repeat center;
 	background-size: cover;
 	height: 95%;
 	min-height: 650px;

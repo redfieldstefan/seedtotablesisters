@@ -5,9 +5,11 @@ var app = express();
 var mongoose = require('mongoose');
 var passport = require('passport');
 var bodyparser = require('body-parser');
-
+var prerender = require("prerender-node");
 var blogRoutes = express.Router();
 var adminRoutes = express.Router();
+
+app.use(prerender);
 
 process.env.APP_SECRET = process.env.APP_SECRET || 'seedtotablesisters.com';
 mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/seedtotable_store');

@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "build": "grunt --gruntfile ./dev/Gruntfile.js",
+    "launch": "grunt launch",
     "start": "nodemon server.js || node server.js",
     "db": "mongod --dbpath=./data"
   },
